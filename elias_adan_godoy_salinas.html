@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Currículum - Dr. Elias Adan Godoy Salinas</title>
+  <meta name="description" content="Currículum profesional del Dr. Elias Adan Godoy Salinas, especialista en Ortopedia y Traumatología, Cirugía Reconstructiva de Cadera y Rodilla">
+  <meta name="keywords" content="ortopedia, traumatología, cirugía reconstructiva, cadera, rodilla, médico, currículum">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- Curriculum CSS -->
+  <style>
+    :root {
+      --cv-primary: #0077b6; /* Azul médico como acento */
+      --cv-secondary: #f8f9fa;
+      --cv-dark: #343a40;
+      --cv-light: #f8f9fa;
+      --cv-gray: #6c757d;
+      --cv-light-gray: #e9ecef;
+    }
+
+    /* Estilos generales */
+    .cv-section {
+      margin-bottom: 3rem;
+      position: relative;
+    }
+
+    .cv-section::after {
+      content: '';
+      display: block;
+      height: 1px;
+      width: 100%;
+      background: linear-gradient(to right, var(--cv-light-gray), var(--cv-primary), var(--cv-light-gray));
+      margin-top: 2rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+
+    .cv-section:last-child::after {
+      display: none;
+    }
+
+    .cv-section-icon {
+      color: var(--cv-primary);
+      margin-right: 0.5rem;
+      font-size: 1.5rem;
+    }
+
+    .cv-section-title {
+      color: var(--cv-primary);
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+    }
+
+    /* Cabecera */
+    .cv-header {
+      text-align: center;
+      padding: 3rem 0;
+      background-color: var(--cv-primary);
+      color: white;
+      margin-bottom: 3rem;
+    }
+
+    .cv-name {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .cv-specialties {
+      font-size: 1.5rem;
+      font-weight: 500;
+      margin-bottom: 0.25rem;
+    }
+
+    .cv-subspecialty {
+      font-size: 1.2rem;
+      font-weight: 400;
+    }
+
+    /* Timeline para formación y experiencia */
+    .cv-timeline {
+      position: relative;
+      padding-left: 2rem;
+    }
+
+    .cv-timeline-item {
+      position: relative;
+      padding-bottom: 1.5rem;
+      padding-left: 1.5rem;
+    }
+
+    .cv-timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -0.5rem;
+      top: 0.5rem;
+      height: 1rem;
+      width: 1rem;
+      border-radius: 50%;
+      background-color: var(--cv-primary);
+      z-index: 1;
+    }
+
+    .cv-timeline-item::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 1rem;
+      height: 100%;
+      width: 1px;
+      background-color: var(--cv-light-gray);
+    }
+
+    .cv-timeline-item:last-child::after {
+      display: none;
+    }
+
+    .cv-year {
+      font-weight: 600;
+      color: var(--cv-primary);
+      margin-bottom: 0.25rem;
+      display: inline-block;
+    }
+
+    .cv-institution {
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+
+    .cv-degree {
+      font-style: italic;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Tabla para experiencia internacional */
+    .cv-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 1.5rem;
+    }
+
+    .cv-table th {
+      background-color: var(--cv-primary);
+      color: white;
+      text-align: left;
+      padding: 0.75rem;
+    }
+
+    .cv-table td {
+      padding: 0.75rem;
+      border-bottom: 1px solid var(--cv-light-gray);
+    }
+
+    .cv-table tr:nth-child(even) {
+      background-color: var(--cv-secondary);
+    }
+
+    /* Barras de progreso para idiomas */
+    .cv-progress-container {
+      margin-bottom: 1rem;
+    }
+
+    .cv-progress-label {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.5rem;
+    }
+
+    .cv-progress-bar {
+      height: 0.75rem;
+      background-color: var(--cv-light-gray);
+      border-radius: 0.375rem;
+      overflow: hidden;
+    }
+
+    .cv-progress-value {
+      height: 100%;
+      background-color: var(--cv-primary);
+      border-radius: 0.375rem;
+    }
+
+    /* Contacto */
+    .cv-contact-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .cv-contact-icon {
+      color: var(--cv-primary);
+      font-size: 1.25rem;
+      margin-right: 1rem;
+      width: 2rem;
+      text-align: center;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .cv-container {
+        flex-direction: column;
+      }
+      
+      .cv-sidebar {
+        width: 100%;
+        margin-bottom: 2rem;
+      }
+      
+      .cv-main {
+        width: 100%;
+      }
+    }
+
+    /* Optimización para impresión */
+    @media print {
+      .header, .footer, .scroll-top, .cta-btn, .navmenu, .topbar {
+        display: none !important;
+      }
+      
+      body {
+        background-color: white;
+        font-size: 12pt;
+      }
+      
+      .cv-header {
+        background-color: white !important;
+        color: var(--cv-primary) !important;
+        padding: 1rem 0;
+      }
+      
+      .cv-section {
+        page-break-inside: avoid;
+        margin-bottom: 1.5rem;
+      }
+      
+      .cv-section::after {
+        display: none;
+      }
+      
+      a {
+        text-decoration: none !important;
+        color: var(--cv-dark) !important;
+      }
+    }
+  </style>
+</head>
+
+<body class="cv-page">
+
+  <header id="header" class="header sticky-top">
+    <div class="topbar d-flex align-items-center">
+      <div class="container d-flex justify-content-center justify-content-md-between">
+        <div class="d-none d-md-flex align-items-center">
+          <i class="bi bi-clock me-1"></i> Lunes - Sábado, 8AM a 10PM
+        </div>
+        <div class="d-flex align-items-center">
+          <i class="bi bi-phone me-1"></i> Llámanos +1 5589 55488 55
+        </div>
+      </div>
+    </div><!-- End Top Bar -->
+
+    <div class="branding d-flex align-items-center">
+      <div class="container position-relative d-flex align-items-center justify-content-end">
+        <a href="index.html" class="logo d-flex align-items-center me-auto">
+          <img src="https://pub-57785c6ab26c4191ad9d2bd2e63e7d88.r2.dev/logo/LOGO%20RECONARTIS%20NEGRO.png">
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="index.html#about">Acerca de</a></li>
+            <li><a href="index.html#services">Servicios</a></li>
+            <li><a href="index.html#departments">Departamentos</a></li>
+            <li><a href="index.html#doctors">Doctores</a></li>
+            <li><a href="curriculum.html" class="active">Currículum</a></li>
+            <li><a href="index.html#contact">Contacto</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+
+        <a class="cta-btn" href="index.html#appointment">Agendar Cita</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <!-- Cabecera del CV -->
+    <section class="cv-header">
+      <div class="container">
+        <h1 class="cv-name" style="color: white;">Dr. Elias Adan Godoy Salinas</h1>
+        <h2 class="cv-specialties" style="color: white;">Ortopedia y Traumatología</h2>
+        <h3 class="cv-subspecialty" style="color: white;">Cirugía Reconstructiva Cadera y Rodilla</h3>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="row">
+        <!-- Columna lateral (en desktop) -->
+        <div class="col-lg-4 mb-5">
+          <!-- Perfil -->
+          <section class="cv-section" data-aos="fade-up">
+            <h2 class="cv-section-title">
+              <i class="fas fa-user cv-section-icon"></i> Perfil
+            </h2>
+            <p>Médico especialista en Ortopedia y Traumatología con alta especialidad en Cirugía Reconstructiva de Cadera y Rodilla. Originario de Monterrey, Nuevo León, con 30 años de edad y apasionado por la medicina deportiva y la investigación clínica.</p>
+          </section>
+
+          <!-- Objetivos Profesionales -->
+          <section class="cv-section" data-aos="fade-up" data-aos-delay="100">
+            <h2 class="cv-section-title">
+              <i class="fas fa-bullseye cv-section-icon"></i> Objetivos Profesionales
+            </h2>
+            <ul>
+              <li>Establecer una práctica clínica de excelencia en cirugía reconstructiva</li>
+              <li>Contribuir a la investigación en técnicas mínimamente invasivas</li>
+              <li>Formar parte de equipos médicos deportivos de alto rendimiento</li>
+              <li>Desarrollar programas de prevención de lesiones articulares</li>
+            </ul>
+          </section>
+
+          <!-- Idiomas -->
+          <section class="cv-section" data-aos="fade-up" data-aos-delay="200">
+            <h2 class="cv-section-title">
+              <i class="fas fa-language cv-section-icon"></i> Idiomas
+            </h2>
+            
+            <div class="cv-progress-container">
+              <div class="cv-progress-label">
+                <span>Español</span>
+                <span>Nativo</span>
+              </div>
+              <div class="cv-progress-bar">
+                <div class="cv-progress-value" style="width: 100%"></div>
+              </div>
+            </div>
+            
+            <div class="cv-progress-container">
+              <div class="cv-progress-label">
+                <span>Inglés</span>
+                <span>Avanzado</span>
+              </div>
+              <div class="cv-progress-bar">
+                <div class="cv-progress-value" style="width: 85%"></div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Contacto -->
+          <section class="cv-section" data-aos="fade-up" data-aos-delay="300">
+            <h2 class="cv-section-title">
+              <i class="fas fa-address-card cv-section-icon"></i> Contacto
+            </h2>
+            
+            <div class="cv-contact-item">
+              <i class="fas fa-envelope cv-contact-icon"></i>
+              <span>elias.godoy@medicio.com</span>
+            </div>
+            
+            <div class="cv-contact-item">
+              <i class="fas fa-phone cv-contact-icon"></i>
+              <span>+52 (81) 1234-5678</span>
+            </div>
+            
+            <div class="cv-contact-item">
+              <i class="fas fa-mobile-alt cv-contact-icon"></i>
+              <span>+52 (81) 9876-5432</span>
+            </div>
+            
+            <div class="cv-contact-item">
+              <i class="fas fa-map-marker-alt cv-contact-icon"></i>
+              <span>Centro Médico Medicio, Torre 2, Consultorio 405<br>Monterrey, Nuevo León, México</span>
+            </div>
+          </section>
+        </div>
+
+        <!-- Columna principal -->
+        <div class="col-lg-8">
+          <!-- Formación Académica -->
+          <section class="cv-section" data-aos="fade-up">
+            <h2 class="cv-section-title">
+              <i class="fas fa-graduation-cap cv-section-icon"></i> Formación Académica
+            </h2>
+            
+            <div class="cv-timeline">
+              <div class="cv-timeline-item">
+                <span class="cv-year">2024-2025</span>
+                <h3 class="cv-institution">Universidad de Monterrey (UDEM)</h3>
+                <p class="cv-degree">Alta Especialidad en Cirugía Reconstructiva de Cadera y Rodilla</p>
+                <p>Formación avanzada en técnicas quirúrgicas de reemplazo articular y reconstrucción de lesiones complejas.</p>
+                <p><strong>Logros destacados:</strong> Rotación internacional en Mayo Clinic (Rochester, MN) y publicación de investigación sobre nuevos biomateriales para prótesis articulares.</p>
+              </div>
+              
+              <div class="cv-timeline-item">
+                <span class="cv-year">2020-2024</span>
+                <h3 class="cv-institution">Universidad La Salle</h3>
+                <p class="cv-degree">Especialidad en Ortopedia y Traumatología</p>
+                <p>Formación integral en el diagnóstico y tratamiento de patologías del sistema musculoesquelético.</p>
+                <p><strong>Logros destacados:</strong> Reconocimiento como residente destacado del año 2023 y participación en el programa de intercambio con la Universidad de Columbia.</p>
+              </div>
+              
+              <div class="cv-timeline-item">
+                <span class="cv-year">2013-2019</span>
+                <h3 class="cv-institution">Universidad Autónoma de Nuevo León (UANL)</h3>
+                <p class="cv-degree">Licenciatura en Medicina</p>
+                <p>Formación médica general con enfoque en ciencias básicas y clínicas.</p>
+                <p><strong>Logros destacados:</strong> Graduado con mención honorífica y tesis sobre "Factores biomecánicos en lesiones deportivas de rodilla".</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Experiencia Clínica Internacional -->
+          <section class="cv-section" data-aos="fade-up" data-aos-delay="100">
+            <h2 class="cv-section-title">
+              <i class="fas fa-globe-americas cv-section-icon"></i> Experiencia Clínica Internacional
+            </h2>
+            
+            <table class="cv-table">
+              <thead>
+                <tr>
+                  <th>Ubicación</th>
+                  <th>Especialidad</th>
+                  <th>Mentor</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Mayo Clinic, Rochester, MN, USA</td>
+                  <td>Cirugía de Reemplazo Articular</td>
+                  <td>Dr. Mark Pagnano</td>
+                </tr>
+                <tr>
+                  <td>Fundación Santa Fe, Bogotá, Colombia</td>
+                  <td>Artroscopia Avanzada</td>
+                  <td>Dr. Guillermo Bonilla</td>
+                </tr>
+                <tr>
+                  <td>Hospital Universitar de Bucarest, Rumania</td>
+                  <td>Trauma Ortopédico</td>
+                  <td>Dr. Vlad Predescu</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <!-- Experiencia Laboral -->
+          <section class="cv-section" data-aos="fade-up" data-aos-delay="200">
+            <h2 class="cv-section-title">
+              <i class="fas fa-briefcase cv-section-icon"></i> Experiencia Laboral
+            </h2>
+            
+            <div class="cv-timeline">
+              <div class="cv-timeline-item">
+                <span class="cv-year">2025-Presente</span>
+                <h3 class="cv-institution">Hospital Universitario UANL</h3>
+                <p class="cv-degree">Médico Adscrito - Departamento de Ortopedia</p>
+                <p>Responsable del programa de cirugía articular y atención de pacientes con patologías complejas de cadera y rodilla.</p>
+              </div>
+              
+              <div class="cv-timeline-item">
+                <span class="cv-year">2024-Presente</span>
+                <h3 class="cv-institution">Centro Médico Medicio</h3>
+                <p class="cv-degree">Especialista en Ortopedia y Traumatología</p>
+                <p>Práctica privada enfocada en cirugía reconstructiva y medicina deportiva.</p>
+              </div>
+              
+              <div class="cv-timeline-item">
+                <span class="cv-year">2023-2024</span>
+                <h3 class="cv-institution">Hospital San José</h3>
+                <p class="cv-degree">Médico Residente - Jefe de Residentes</p>
+                <p>Coordinación del programa de residentes y participación en cirugías complejas bajo supervisión.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Cursos y Certificaciones -->
+          <section class="cv-section" data-aos="fade-up" data-aos-delay="300">
+            <h2 class="cv-section-title">
+              <i class="fas fa-certificate cv-section-icon"></i> Cursos y Certificaciones
+            </h2>
+            
+            <h4>2022-2024</h4>
+            <ul>
+              <li>Certificación en Artroplastia de Cadera - AAOS</li>
+              <li>Curso Avanzado de Artroscopia - SLARD</li>
+              <li>Certificación en Manejo de Trauma Ortopédico - AO Trauma</li>
+            </ul>
+            
+            <h4>2020-2021</h4>
+            <ul>
+              <li>Curso de Cirugía Mínimamente Invasiva - AMECRA</li>
+              <li>Certificación en Ultrasonido Musculoesquelético - AIUM</li>
+            </ul>
+            
+            <h4>2019</h4>
+            <ul>
+              <li>Soporte Vital Avanzado en Trauma (ATLS) - American College of Surgeons</li>
+              <li>Curso Básico de Ortopedia para Médicos Generales - SMO</li>
+            </ul>
+          </section>
+
+          <!-- Publicaciones -->
+          <section class="cv-section" data-aos="fade-up" data-aos-delay="400">
+            <h2 class="cv-section-title">
+              <i class="fas fa-book cv-section-icon"></i> Publicaciones
+            </h2>
+            
+            <h4>2024</h4>
+            <ul>
+              <li>Godoy-Salinas EA, Martínez R, López J. "Nuevos biomateriales en prótesis de cadera: revisión sistemática". <em>Revista Mexicana de Ortopedia</em>. 2024;38(2):112-120.</li>
+            </ul>
+            
+            <h4>2022</h4>
+            <ul>
+              <li>Godoy-Salinas EA, Pérez A, González M. "Resultados funcionales post artroplastia total de rodilla en pacientes menores de 55 años". <em>Acta Ortopédica Latinoamericana</em>. 2022;29(3):45-52.</li>
+            </ul>
+            
+            <h4>2019</h4>
+            <ul>
+              <li>Godoy-Salinas EA. "Factores biomecánicos en lesiones deportivas de rodilla". <em>Tesis de Licenciatura</em>. Universidad Autónoma de Nuevo León. 2019.</li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer id="footer" class="footer light-background">
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">Medicio</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>A108 Adam Street</p>
+            <p>New York, NY 535022</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
+            <p><strong>Email:</strong> <span>info@example.com</span></p>
+          </div>
+          <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Enlaces Útiles</h4>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="index.html#about">Acerca de</a></li>
+            <li><a href="index.html#services">Servicios</a></li>
+            <li><a href="curriculum.html">Currículum</a></li>
+            <li><a href="index.html#contact">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Nuestros Servicios</h4>
+          <ul>
+            <li><a href="#">Consulta General</a></li>
+            <li><a href="#">Ortopedia</a></li>
+            <li><a href="#">Traumatología</a></li>
+            <li><a href="#">Cirugía Reconstructiva</a></li>
+            <li><a href="#">Medicina Deportiva</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-6 footer-newsletter">
+          <h4>Suscríbete a nuestro boletín</h4>
+          <p>Recibe información actualizada sobre avances médicos y servicios</p>
+          <form action="" method="post">
+            <input type="email" name="email"><input type="submit" value="Suscribirse">
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Medicio</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
